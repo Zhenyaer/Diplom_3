@@ -18,3 +18,10 @@ def create_user_data():
         "name": username
     }
     return payload
+
+
+class ControlText:
+    ORDER_STATUS_READY = 'Ваш заказ начали готовить'
+    OPEN_POPUP_CLASS = 'Modal_modal_opened__3ISw4 Modal_modal__P3_V5'
+    CLOSE_POPUP_CLASS = 'Modal_modal__P3_V5'
+    STATUS_PASSWORD_FIELD_CLASS = 'input_status_active'

@@ -50,3 +50,7 @@ class BasePage:
     # Проверка появления текста к элементе
     def presence_text_in_element(self, locator, text, timeout=10):
         return WebDriverWait(self.driver, timeout).until(expected_conditions.text_to_be_present_in_element(locator, text))
+
+    # Получение текущего url
+    def get_current_url(self):
+        return self.driver.current_url

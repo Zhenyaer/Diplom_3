@@ -1,4 +1,5 @@
 import allure
+from src.data import ControlText
 
 
 class TestFeedPage:
@@ -9,7 +10,7 @@ class TestFeedPage:
         feed_page.click_on_order()
         popup = feed_page.get_order_popup()
 
-        assert 'Modal_modal_opened__3ISw4 Modal_modal__P3_V5' in popup.get_attribute('class')
+        assert ControlText.CLOSE_POPUP_CLASS in popup.get_attribute('class')
 
     @allure.title('Проверка наличия заказа пользователя в истории заказов')
     def test_exist_user_order_in_order_history(self, user_login, main_page, feed_page, account_page):

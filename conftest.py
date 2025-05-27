@@ -15,11 +15,11 @@ from pages.feed_page import FeedPage
 @pytest.fixture()
 def user_create_with_delete():
     user_data = create_user_data()
-    response = requests.post(Urls.user_create, json=user_data)
+    response = requests.post(Urls.USER_CREATE, json=user_data)
     access_token = response.json()['accessToken']
     yield user_data
     header = {'Authorization': access_token}
-    requests.delete(Urls.user_delete, headers=header)
+    requests.delete(Urls.USER_DELETE, headers=header)
 
 
 @pytest.fixture(params=['Chrome', 'Firefox'])
@@ -27,13 +27,13 @@ def driver(request):
     if request.param == 'Chrome':
         driver = webdriver.Chrome()
         driver.maximize_window()
-        driver.get(Urls.base_url)
+        driver.get(Urls.BASE_URL)
         yield driver
         driver.quit()
     elif request.param == 'Firefox':
         driver = webdriver.Firefox()
         driver.maximize_window()
-        driver.get(Urls.base_url)
+        driver.get(Urls.BASE_URL)
         yield driver
         driver.quit()
 

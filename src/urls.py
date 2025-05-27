@@ -1,10 +1,10 @@
 class Urls:
-    base_url = 'https://stellarburgers.nomoreparties.site/'  # Главная страница
-    user_create = f'{base_url}api/auth/register'  # POST, создание пользователя
-    user_delete = f'{base_url}api/auth/user'  # DELETE, удаление пользователя
-    url_login_page = f'{base_url}login'  # Страница входа
-    password_forgot_page = f'{base_url}forgot-password'  # Страница восстановления пароля
-    password_reset_page = f'{base_url}reset-password'  # Страница смены пароля
-    account_profile_page = f'{base_url}account/profile'  # Личный кабинет
-    account_order_history_page = f'{base_url}account/order-history'  # Страница истории заказов
-    order_feed_page = f'{base_url}feed'  # Страница "Лента заказов"
+    BASE_URL = 'https://stellarburgers.nomoreparties.site/'  # Главная страница
+    USER_CREATE = f'{BASE_URL}api/auth/register'  # POST, создание пользователя
+    USER_DELETE = f'{BASE_URL}api/auth/user'  # DELETE, удаление пользователя
+    URL_LOGIN_PAGE = f'{BASE_URL}login'  # Страница входа
+    PASSWORD_FORGOT_PAGE = f'{BASE_URL}forgot-password'  # Страница восстановления пароля
+    PASSWORD_RESET_PAGE = f'{BASE_URL}reset-password'  # Страница смены пароля
+    ACCOUNT_PROFILE_PAGE = f'{BASE_URL}account/profile'  # Личный кабинет
+    ACCOUNT_ORDER_HISTORY_PAGE = f'{BASE_URL}account/order-history'  # Страница истории заказов
+    ORDER_FEED_PAGE = f'{BASE_URL}feed'  # Страница "Лента заказов"
